@@ -6,6 +6,7 @@ const argv = require('yargs')
   .version()
   .usage('Usage: flip <command> [options]')
   .command(['times [num]'], 'flip that coin x times. once by default.', require('./lib/flip'))
+  .command(['stats [del]'], 'print out your flipping stats', require('./lib/logging'))
   .check(function(argv) {
     if (argv._[0] === 'times' && argv.num > 1000000) {
       return false;
