@@ -1,6 +1,6 @@
 {
   "name": "obey-the-coin",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple CLI that flips a coin",
   "keywords": [
     "coin flip",
@@ -8,13 +8,13 @@
     "heads",
     "tails"
   ],
-  "homepage": "https://github.com/theonlymikeever/obey-the-coin",
+  "homepage": "https://github.com/theonlymikeever/obey-the-coin-cli",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/theonlymikeever/obey-the-coin"
+    "url": "https://github.com/theonlymikeever/obey-the-coin-cli"
   },
   "author": "Mike Kerslake <theonlymikeever@gmail.com>",
   "license": "MIT",

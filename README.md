@@ -9,7 +9,7 @@ Never be indecisive again™
 ## Install
 
 ```
-$ npm install -g otc
+$ npm install -g obey-the-coin
 ```
 
 ## Example usage
