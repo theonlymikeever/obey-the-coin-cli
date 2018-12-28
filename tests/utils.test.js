@@ -1,6 +1,8 @@
-const { basePath, createTimeStamp, createDatedLogName } = require('../lib/utils');
+const fs = require('fs');
+const { basePath, createTimeStamp, createDatedLogName, writeToLogFile, findOrCreateDir, findOrCreateCurrentLog } = require('../lib/utils');
+const { calculateFlips } = require('../lib/flip');
 
-describe('Util functions', () => {
+describe('Date Util functions', () => {
   let dateObj, month, day, year, shortYear;
   beforeEach(() => {
     dateObj = new Date();
@@ -11,9 +13,10 @@ describe('Util functions', () => {
   })
   it('createTimeStamp generates proper timestamp', () => {
     let hour = dateObj.getHours();
-    const minutes = dateObj.getMinutes();
-    const amPm = hour > 12 ? 'pm' : 'am';
-    hour = hour > 12 ? `0${hour-12}` : hour;
+    let minutes = dateObj.getMinutes();
+    minutes = minutes < 10 ? `0${minutes}` : minutes;
+    const amPm = hour >= 12 ? 'pm' : 'am';
+    hour = hour >= 12 ? `0${hour-12}` : hour;
 
     const currentTime = `${month}/${day}/${shortYear} ${hour}:${minutes} ${amPm}`
 
@@ -28,3 +31,24 @@ describe('Util functions', () => {
   })
 });
 
+describe('Logging Util Functions', () => {
+  xit('writeToLogFile creates a new log file', () => {
+
+    // findOrCreateDir(basePath)
+    //   .then(() => {
+    //     const datedLogName = createDatedLogName(basePath);
+    //     findOrCreateCurrentLog(datedLogName)
+    //       .then(data => {
+    //         console.log(data)
+    //       })
+    //   })
+    //   .catch(console.log)
+
+      // const tempData = calculateFlips();
+
+      // writeToLogFile(tempData);
+      // const newFiles = fs.readdirSync(basePath).map(file => file);
+
+      // expect(startingLength).toBeLessThan(newFiles.length);
+  });
+});
