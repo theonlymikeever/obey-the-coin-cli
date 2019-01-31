@@ -8,14 +8,14 @@ const argv = require('yargs')
   .command(['times [num]'], 'flip that coin x times. once by default.', require('./lib/flip'))
   .command(['stats [del]'], 'print out your flipping stats', require('./lib/logging'))
   .check(function(argv) {
-    if (argv._[0] === 'times' && argv.num > 1000000) {
+    if (argv._[0] === 'times' && argv.num > 1000000000) {
       return false;
     } 
     return true;
   })
   .fail(function(msg, err, yargs) {
     if (err) throw err; // preserve stack
-    console.error(chalk.red('Are you trying to crash node? (hint: the limit is one milli times!)'));
+    console.error(chalk.red('Are you trying to crash node? (hint: the limit is one billion times!)'));
     console.error('You should be doing', yargs.help());
     process.exit(1);
   })

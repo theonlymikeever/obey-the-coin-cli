@@ -1,6 +1,6 @@
 # Obey The Coin
 
-A simple coin flip cli, because make choices can be difficult:
+A simple coin flip cli, because making choices can be difficult:
 - Heads = **yes**
 - Tails = **no**
 
@@ -17,7 +17,7 @@ $ npm install -g obey-the-coin
 ```
 $ otc
 ```
-Flips a coin 1 time, by default. 
+Flips a coin 1 time, by default.
 
 ### Options
 
@@ -26,7 +26,7 @@ Flips a coin 1 time, by default.
 ```
 $ otc times [num]
 ```
-Don't trust just one flip? No problem. Specify how many `num` times you want that bad boy to be spin - up to a max of `1,000,000`. 
+Don't trust just one flip? No problem. Specify how many `num` times you want that bad boy to be spin - up to a max of `1,000,000`.
 
 ![otc flip](/assets/example3.png "otc flip coin tie breaker")
 
